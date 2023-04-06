@@ -1,0 +1,775 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project #1</title>
+    <style>
+      body{
+        padding: 50px 100px;
+      }
+      h1{
+        text-align: centerd;
+      }
+      #container{
+        text-align: center;
+        background-color: gray;
+        padding: 50px;
+        font-weight: bolder;
+      }
+      .input-div{
+        display: inline-block;
+        padding: 5px;
+        height:;
+      }
+      .inp{
+        
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 120px;
+        text-align: center;
+        
+      }
+      label{
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Converter</h1>
+    <div id="container">
+      <div class="input-div">
+        <label>celsius</label><br>
+        <input type="number" value="0" id="cel" class="inp" />
+      </div>
+
+      <div class="input-div">
+        <label> farenheit</label><br>
+        <input type="number" value="37" id="fah" class="inp"  />
+      </div>
+    </div>
+    <script>
+      var cel = document.getElementById("cel");
+      var fah = document.getElementById("fah");
+
+      cel.addEventListener('input',function(){
+      let c = this.value;
+      let f = (c*9/5)+32;
+      fah.value = f;
+      });
+
+      fah.addEventListener('input',function(){
+      
+         let f = this.value;
+h1{
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+}
+#textbox{
+  background-color:wheat;
+  width: 100%;
+  border-color: blue;
+  border-width: 4px;
+  font-size: 15px;
+}
+p{
+  text-align: center;
+  background-color: blue;
+  font size : 20px; 
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+
+}
+  </style>
+</head>
+<body>
+  <h1>words and character counter</h1>
+  <textarea id="textbox" cols="30" rows="10"></textarea>
+  <p>
+    <span id="word">0</span> words and
+    <span id="char">0</span> characters
+  </p>
+
+
+  <script>
+    let textbox = document.getElementById("textbox");
+
+    textbox.addEventListener('input',function(){
+      var text = this.value;
+      let char = text.length;
+      document.getElementById("char").innerHTML = char;
+
+               let words = text.split(" ");
+               console.log(words);
+               document.getElementById("word").innerHTML = words.length;
+
+    });
+    </script>
+    </body>
+    </html>
+  44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background change #3</title>
+    <style>
+      body {
+        background-color: gray;
+        margin: 10px;
+        padding: 20px 100px;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 2%;
+      }
+      p {
+        font-size: 18px;
+        text-align: justify;
+      }
+      .btn {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: solid orange 2px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      #white {
+        background-color: white;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #blue {
+        background-color: blue;
+      }
+      #black {
+        background-color: black;
+      }
+      #color-switcher {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="color-switcher">
+      <span class="btn" id="white" onclick="changebg('white')"></span>
+      <span class="btn" id="yellow" onclick="changebg('yellow')"></span>
+      <span class="btn" id="blue" onclick="changebg('blue')"></span>
+      <span class="btn" id="black" onclick="changebg('black')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <img
+      src="data:image/jpeg;base64,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"
+      alt=""
+      width=""
+      height="px"
+    />
+    <p class="text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim neque
+      voluptates exercitationem magni voluptatem expedita, nostrum accusamus
+      modi minus, voluptatibus recusandae nam quod. Nam nihil rem eligendi
+      architecto consequuntur neque saepe minima soluta dolorum laboriosam.
+      Maxime inventore voluptate laborum, magnam unde fugit cumque dolore
+      consequuntur ea modi, hic ratione error consequatur recusandae eum, dicta
+      nisi mollitia architecto iste molestias praesentium minus adipisci
+      obcaecati. Praesentium veritatis assumenda, dolores facilis error beatae,
+      magnam incidunt illum, dicta doloremque cupiditate? Nam velit praesentium
+      suscipit veniam, voluptas inventore quidem porro eveniet quibusdam, nihil
+      ad quae. Repellendus culpa soluta praesentium saepe aspernatur cum velit,
+      fuga architecto eveniet et quo magnam voluptatibus consequatur, nihil
+      laboriosam laborum impedit dolorum maxime enim at laudantium! Dolores
+      saepe quia, beatae autem provident reiciendis animi. Placeat, in? Hic rem
+      eligendi adipisci laudantium distinctio voluptatum molestiae iure illo
+      corrupti. Architecto voluptatem atque facere molestiae nostrum cupiditate,
+      totam eius iure saepe dolorum laborum accusamus maiores nesciunt nemo!
+      Reiciendis consequatur sed expedita incidunt cum nam maiores, suscipit
+      maxime, quos sequi nobis accusamus quas ipsa quibusdam hic cumque
+      architecto voluptatibus quasi consectetur assumenda, pariatur impedit!
+      Ratione eum sapiente, eligendi similique illum delectus voluptate dicta
+      sint natus non, consequuntur quaerat porro architecto facilis dolores
+      perferendis optio laborum! Repellat iure nostrum aperiam in, quo omnis at
+      tempora necessitatibus optio facere doloremque consectetur totam rerum
+      ipsa. Exercitationem, delectus vitae! Vitae quod accusantium sunt maxime
+      id molestias. Soluta quaerat necessitatibus voluptate provident adipisci?
+      Labore libero tempore laborum, exercitationem ipsa error distinctio eius
+      modi fugit nobis id iusto commodi quas voluptates nulla ad, veniam
+      aspernatur nisi dicta delectus consequuntur assumenda voluptate! Quis, vel
+      recusandae sed fuga atque eveniet, dolor suscipit ex minima explicabo iste
+      in. Asperiores modi iure earum odit neque tenetur tempore, error veniam
+      fugiat necessitatibus, quibusdam cum! Eaque quod excepturi officiis, nisi
+      nesciunt voluptatibus veritatis autem eveniet consectetur incidunt nobis
+      ut et laboriosam commodi sapiente quasi harum ipsa, dignissimos
+      consequuntur possimus aliquid officia labore rerum optio? Officia eveniet
+      enim aliquid delectus hic adipisci eaque eum itaque iusto, magnam, sit
+      saepe sunt cum repellat dolorem quas sapiente natus? Incidunt labore
+      maiores nobis repellat! Iure facere earum hic voluptate porro dolor minus,
+      doloremque molestias iusto cum, quae labore deserunt repellendus
+      architecto recusandae corrupti commodi nihil accusamus veniam tempora
+      alias velit, distinctio vero! Porro facilis, dignissimos unde eos itaque
+      ipsa enim eius molestiae, vel et repudiandae atque quia hic consequatur
+      accusamus? Cumque consequatur delectus unde officiis, vero odit facere.
+      Voluptas saepe animi excepturi provident officia sapiente repellat aperiam
+      doloremque voluptate. Doloremque accusamus dolores quos tenetur
+      perspiciatis debitis repudiandae, optio sint itaque. Itaque accusamus
+      cumque veritatis ab, corrupti quia natus totam odit mollitia pariatur est
+      numquam quisquam tenetur officia aperiam quaerat ad minima hic inventore
+      necessitatibus sapiente soluta! Voluptate maxime reprehenderit, odio
+      dolores id facere ratione rem incidunt, cum sunt laboriosam omnis a eum,
+      aspernatur dolorum quasi ea veniam nostrum tempora qui totam molestias.
+      Consectetur molestias esse enim fugiat culpa vero ullam itaque ipsa quis
+      quas! Repudiandae fugiat quo praesentium iure dolores cum necessitatibus,
+      voluptatum officiis non labore saepe atque vero. Omnis, quam.
+    </p>
+
+    <script>
+      function changebg(color) {
+        document.body.style.backgroundColor = color;
+        let text = document.getElementsByClassName("text");
+        if (color == "#000000") {
+          for (let elm of text) {
+            elm.style.color = "white";
+          }
+        } else {
+          for (let elm of text) {
+            elm.style.color = "black";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <style>
+    body{
+      
+      margin: 10px;
+    
+    
+    }
+    #header{
+      text-align: center;
+    }
+    #logo{
+width: 250px;
+height: auto;
+    }
+    #menubar{
+     text-align:center;
+     background-color: gray; 
+     padding: px;
+    }
+    #menubar li{
+      display: inline-block;
+      padding: 15px 10px;
+      color: white;
+      font-size: 18px;
+      font-weight:bold ;
+    }
+    #container{
+      text-align: center;
+      padding: 30px 100px;
+    }
+    #image{
+      width: 100%;
+    }
+    .sticky{
+     position: fixed; 
+     top: 0;
+     width: 100%;
+    }
+    p{
+      text-align: justify;
+    }
+  </style>
+ </head>
+ <body>
+  <div id="header">
+    <img src="https://www.bing.com/th?id=OIP.j7UNFUhCHmANJ9caEpBu8wHaEK&w=184&h=105&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="" id="logo">
+    <nav id="menubar">
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Our Team</li>
+      <li>Client</li>
+      <li>Contact Us</li>
+    </nav>
+    <div id="container">
+      <h1>About Us</h1>
+      <img id="image" src="https://www.bing.com/th?id=OIP.yOI2uzqjTdtB_9O5cwTp3AHaFj&w=135&h=101&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"lt="">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolores necessitatibus at hic. Laudantium, veniam fugit est dicta voluptatum nulla iure alias ab? Aut fugiat similique, explicabo, officia deserunt quas debitis laborum velit eaque facilis cupiditate quis nam, non dolor ipsa placeat aliquam! Omnis recusandae corrupti provident. Recusandae sit, dolorum dicta fuga voluptatem voluptates maiores omnis nisi pariatur natus impedit quia beatae. Quia, aperiam repudiandae quisquam quasi hic omnis nisi quidem aspernatur similique, fugit ea modi accusamus harum, inventore ab? Omnis, nobis similique expedita autem harum cum corporis ea eum officiis corrupti perferendis doloremque impedit illum praesentium commodi quae ducimus illo placeat unde dicta magnam quia. Nihil atque impedit voluptates architecto. Molestias natus quaerat eaque placeat alias voluptate aliquid animi magni voluptas. Sunt animi tenetur atque distinctio? Recusandae, deserunt, vero excepturi consectetur dolorem est aliquid sint soluta placeat necessitatibus dicta doloremque ipsam tempore nesciunt obcaecati adipisci consequuntur! Quasi error aspernatur quaerat ullam nisi. Ullam voluptas incidunt doloremque consectetur velit excepturi repudiandae hic et aperiam, deleniti facilis culpa inventore dignissimos! Totam facilis, repellat, corporis ex quis minima consequatur accusantium consequuntur perferendis cupiditate officia. Facere quisquam odit esse blanditiis sunt saepe eius impedit repellendus necessitatibus voluptatum architecto, consequatur nostrum nemo fuga explicabo nihil libero! Soluta quisquam fuga doloremque sit quos necessitatibus, fugit incidunt. Et consectetur ad pariatur inventore dicta suscipit iusto delectus recusandae similique explicabo, accusamus excepturi. Accusantium obcaecati eius vitae veritatis recusandae blanditiis. Voluptas similique eligendi, rem voluptatem harum, fuga, alias nemo dicta ullam pariatur consequuntur! Libero incidunt veniam nostrum, laborum saepe quasi assumenda tenetur neque provident? Ab excepturi natus earum repellendus, quae officia libero voluptatibus fugit eveniet asperiores nostrum nisi nulla quas architecto tempora fuga voluptate ipsam dignissimos autem qui officiis in doloremque sapiente. Veritatis incidunt atque saepe doloremque. Amet nostrum illum ipsam at sit fuga accusamus assumenda, cupiditate excepturi aliquam ex debitis deserunt quia obcaecati aut odio, optio perferendis necessitatibus hic. Harum enim quod reprehenderit! Odit voluptate perspiciatis asperiores eligendi reprehenderit nulla ratione molestiae unde! Ipsa blanditiis, aperiam nostrum tenetur, doloremque obcaecati deleniti exercitationem ipsum maiores reiciendis quibusdam dolores delectus atque placeat ad. Quia in obcaecati illum distinctio ullam itaque, sint alias sed molestias eligendi magni numquam, asperiores voluptates fuga esse modi officiis assumenda nesciunt? Dicta hic amet tenetur excepturi repudiandae mollitia debitis ipsa labore voluptates, quam atque rem error asperiores? Libero soluta repellat iusto fugiat delectus, eaque labore, amet ipsam fugit, iure sint autem hic. Rem, voluptatem. Nisi repudiandae quia a enim in quo facilis ad harum ab sed quas, delectus corporis iure! Est, reiciendis voluptas. Quibusdam ea adipisci, porro sint repellat accusamus magni eligendi nobis repudiandae rerum odio aut asperiores deleniti veniam quo! Voluptatum eum fuga architecto consequuntur facilis veritatis natus quibusdam aliquam, iure odit! Est quas officia, soluta quam, dolores repellat nobis quos ex asperiores ipsum quod tempore et at rerum, porro totam maiores fuga debitis consequatur aperiam in sequi assumenda alias? Error vel exercitationem, aliquam fuga consectetur accusamus iusto praesentium quos quo voluptatem quasi excepturi mollitia? Adipisci debitis ducimus itaque nam, totam enim possimus officiis?</p>
+    </div>
+  </div>
+
+  <script>
+window.addEventListener('scroll',function(){
+let navbar = document.getElementById("menubar");
+
+  if(window.pageYOffset >= 190){
+    navbar.classList.add('sticky');
+    }else{
+      navbar.classList.remove('sticky');
+    }
+})
+  </script>
+ </body>
+ </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <style>
+      body {
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h2 {
+        margin: 20px 0px 10px 0px;
+      }
+      #form-container {
+        background-color: white;
+        padding: 70px;
+        text-align: center;
+      }
+      input {
+        width: 200px;
+        margin: 5px 0px;
+        padding: 5px;
+      }
+      input[type="submit"] {
+        width: 150px;
+        background-color: #3498db;
+        border: 0px;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        border-radius: 0px;
+      }
+      .error {
+        text-align: left;
+        color: red;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form-container">
+      <h2>Login</h2>
+      <form action="" onsubmit="return validateForm()">
+        <input type="text" placeholder="User Name" id="username" /><br />
+        <p id="usererror" class="error"></p>
+        <input type="password" placeholder="password" id="password" /><br />
+        <p id="passerror" class="error"></p>
+        <input type="Submit" />
+      </form>
+    </div>
+    <script>
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+      let flag = 1;
+
+      function validateForm() {
+        if (username.value == "") {
+          document.getElementById("usererror").innerHTML = "Username is empty";
+          flag = 0;
+        } else if (username.value.length < 3) {
+          document.getElementById("usererror").innerHTML =
+            "User name required min 3 char ";
+        } else {
+          document.getElementById("usererror").innerHTML = "";
+          flag = 1;
+        }
+
+        if (password.value == "") {
+          document.getElementById("passerror").innerHTML = "password is Empty";
+          flag = 0;
+        } else {
+          document.getElementById("passerror").innerHTML = "";
+          flag = 1;
+        }
+
+        if (flag) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
+--></meta>
+
+</head>
+
+          
+
+44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image slider</title>
+    <style>
+      body{
+    margin: 0;
+}
+.slide-container{
+    position: relative;
+    width: 100%;
+}
+.slide img{
+    width: 100%;
+}
+.arrow{
+    cursor: pointer;
+    position : absolute;
+    top: 45%;
+    color: black;
+    background-color: rgba(250, 235, 215, 0.722);
+    padding: 8px 19px;
+    border-radius: 50%; 
+    font-size: 20px;
+    font-weight: bold; 
+}
+.next{
+    right: 10px;
+}
+.prev{
+left: 10px;
+}
+.caption{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+padding: 5px 0px;
+}
+
+.slide{
+    display: none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide">
+        <img src="images/banner.png" alt="" />
+        <div class="caption">University view</div>
+      </div>
+      
+     <div class="slide">
+      <img src="images/cafeteria.png" alt="">
+      <div class="caption"> Cafeteria </div>
+    </div>
+
+     <div class="slide">
+      <img src="images/library.png" alt="">
+      <div class="caption">Liberary view</div>
+    </div>
+
+     <div class="slide">
+      <img src="images/basketball.png" alt="">
+      <div class="caption">paly Area</div>
+    </div>
+  </div>
+
+      <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+      <span class="arrow next" onclick="controller(+1)">&#10095;</span>
+    </div>
+
+    <script>
+      
+let flag = 3;
+
+function controller(x) {
+    flag = flag + x;
+    slideshow(flag);
+ //left  :  flag = 2 + (-1) = 1
+    //right  V  flag = 2 + 1 = 3
+}
+
+slideshow(flag);
+
+function slideshow(num) {
+    let slides = document.getElementsByClassName("slide");
+
+    if (num == slides.length) {
+        flag = 0;
+        num = 0;
+    }
+    if (num < 0) {
+        flag = slides.length - 1;
+        num = slides.length - 1;
+    }
+
+
+    for (let y of slides) {
+        y.style.display = "none";
+    }
+    slides[num].style.display = "block"; 
+}
+    </script>
+  </body>
+</html>
+
+
+555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index.html</title>
+    <style>
+      body {
+        background-color: #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #container {
+        color: silver;
+      }
+      .digit {
+        font-size: 100px;
+        font-weight: bold;
+      }
+      .txt {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      #btn {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .btn {
+        padding: 7px 25px;
+        font-size: 15px;
+        margin: 20px 50px;
+        color: white;
+        border: 0px;
+        cursor: pointer;
+      }
+      #start {
+        background-color: #1abc9c;
+      }
+      #stop {
+        background-color: #3498db;
+      }
+      #reset {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="time">
+        <span class="digit" id="hr">00</span>
+        <span class="txt">Hr</span>
+        <span class="digit" id="min">00</span>
+        <span class="txt">Min</span>
+        <span class="digit" id="sec">00</span>
+        <span class="txt">Sec</span>
+        <span class="digit" id="count">00</span>
+      </div>
+
+      <div id="btn-container">
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reset">Reset</button>
+      </div>
+    </div>
+
+    <script>
+      var hr = 0;
+      var min = 0;
+      var sec = 0;
+      var count = 0;
+
+      var timer = false;
+
+      function start() {
+        timer = true;
+        stopwatch();
+      }
+
+      function stop() {
+        timer = false;
+      }
+
+      function reset() {
+        timer = false;
+      }
+
+      function stopwatch() {
+        if (timer == true) {
+          count = count + 1;
+          document.getElementById("count").innerHTML = count;
+
+          setTimeout("stopwatch()", 10);
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+//calculator 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value =''"
+              class="operator"
+            />
+            <input
+              type="button"
+              value="DE"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+              class="operator"
+            />
+            <input
+              type="button"
+              value="."
+              onclick="display.value +='.'"
+              class="operator"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value +='/'"
+              class="operator"
+            />
+          </div>
+
+          <div>
+            <input type="button" value="7" onclick="display.value +='7'" />
+            <input type="button" value="8" onclick="display.value +='8'" />
+            <input type="button" value="9" onclick="display.value +='9'" />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value +='*'"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="4" onclick="display.value +='4'" />
+            <input type="button" value="5" onclick="display.value +='5'" />
+            <input type="button" value="6" onclick="display.value +='6'" />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value +='-'"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="1" onclick="display.value +='1'" />
+            <input type="button" value="2" onclick="display.value +='2'" />
+            <input type="button" value="3" onclick="display.value +='3'" />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value +='+'"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="00" onclick="display.value +='00'" />
+            <input type="button" value="0" onclick="display.value +='0'" />
+            <input
+              type="button"
+              value="="
+              class="equal operator"
+              onclick="display.value = eval(display.value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
